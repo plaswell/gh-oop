@@ -5,6 +5,6 @@ class StaticExample {
   
   static public function sayHello() {
     self::$myNum++;
-    echo "HELLO (" . self::$myNum . ")\n";
+    echo "HELLO (" . self::$myNum . ")<br>\n";
   }
 }

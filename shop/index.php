@@ -34,13 +34,16 @@ include ('TestDb.php');
     
     //print StaticExample::$myNum;
     StaticExample::sayHello();
+    StaticExample::sayHello();
+    StaticExample::sayHello();
+    StaticExample::sayHello();
         
     print "<br>";
     print "<br>";
     
     ///*
     
-    $dsn = "sqlite://Users/petros/Sites/aaa-oop-dev/shop/products.db";
+    $dsn = "sqlite://Users/petros/Sites/gh-oop/shop/products.db";
     $pdo = new PDO($dsn,null,null);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
