@@ -36,7 +36,6 @@ include ('TestDb.php');
     StaticExample::sayHello();
     StaticExample::sayHello();
     StaticExample::sayHello();
-    StaticExample::sayHello();
         
     print "<br>";
     print "<br>";
