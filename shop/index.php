@@ -64,6 +64,13 @@ include ('PeterPrint.php');
     print "<br>";
     print "<br>";
     
+    date_default_timezone_set('Australia/Canberra'); 
+    
+    $date = date_create(FRED);
+    
+    
+    print  date_format($date, 'jS F Y');
+    
     
     
     //*/
