@@ -7,6 +7,7 @@ include ('CdProduct.php');
 include ('BookProduct.php');
 include ('StaticExample.php');
 include ('TestDb.php');
+include ('PeterPrint.php');
 
 ?>
 <!doctype html>
@@ -55,11 +56,15 @@ include ('TestDb.php');
     print "<br>";
     
     $obj2= ShopProduct::getInstance(2, $pdo);
+    
     var_dump($obj2);
+    
     unset($obj2);
     
     print "<br>";
     print "<br>";
+    
+    
     
     //*/
     
