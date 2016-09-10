@@ -75,7 +75,7 @@ include ('PeterPrint.php');
     
     print  date_format($date, 'jS F Y');
     
-    
+    print "That's All Folks!";
     
     //*/
     
