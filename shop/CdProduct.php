@@ -10,7 +10,7 @@ class CdProduct extends ShopProduct {
    
   function getPlayLength() {
     return $this->playLength;
-  } 
+  }
   
   function getSummaryLine() {
     $base  = "$this->title ( {$this->producerMainName}, ";
@@ -18,6 +18,6 @@ class CdProduct extends ShopProduct {
     $base .= " : \${$this->price}";
     $base .= " : playing time - {$this->playLength}";
     return $base;
-  } 
+  }
   
 }

@@ -1,5 +1,6 @@
 <?php
 
+include ('Chargeable.php');
 include ('config.php');
 include ('ShopProduct.php');
 include ('ShopProductWriter.php');
@@ -8,6 +9,7 @@ include ('BookProduct.php');
 include ('StaticExample.php');
 include ('TestDb.php');
 include ('PeterPrint.php');
+
 
 ?>
 <!doctype html>
@@ -59,12 +61,14 @@ include ('PeterPrint.php');
     
     var_dump($obj2);
     
+    print "<br><p>Price: $" . $obj2->getPrice() . "</p><br>";
+    
     unset($obj2);
     
     print "<br>";
     print "<br>";
     
-    date_default_timezone_set('Australia/Canberra'); 
+    date_default_timezone_set('Australia/Canberra');
     
     $date = date_create(FRED);
     

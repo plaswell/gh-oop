@@ -1,6 +1,6 @@
 <?php
 
-class ShopProduct {
+class ShopProduct implements Chargeable {
   private $id = 0;
   public $title;
   public $producerMainName;
@@ -17,6 +17,10 @@ class ShopProduct {
     $this->producerMainName = $mainName;
     $this->price = $price;
  
+  }
+  
+  public function getPrice() {
+    return round(($this->price - ($this->price * $this->discount)/100), 2, PHP_ROUND_HALF_UP);
   }
   
   public function setId($id) {
