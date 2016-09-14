@@ -1,4 +1,4 @@
-<?php
+<?php namespace Petros\shop;
 
 class BookProduct extends ShopProduct {
   public $numPages;

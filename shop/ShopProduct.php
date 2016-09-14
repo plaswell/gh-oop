@@ -1,4 +1,6 @@
-<?php
+<?php namespace Petros\shop;
+
+use \PDO;
 
 class ShopProduct implements Chargeable {
   private $id = 0;

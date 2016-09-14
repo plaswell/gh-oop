@@ -1,4 +1,4 @@
-<?php
+<?php namespace Petros\shop;
 
 class StaticExample {
   static public $myNum;

@@ -1,4 +1,4 @@
-<?php
+<?php namespace Petros\shop;
 
 class CdProduct extends ShopProduct {
   public $playLength;

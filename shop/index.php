@@ -1,4 +1,7 @@
-<?php
+<?php namespace Petros\shop;
+
+use \PDO;
+
 
 include ('Chargeable.php');
 include ('config.php');
@@ -9,6 +12,7 @@ include ('BookProduct.php');
 include ('StaticExample.php');
 include ('TestDb.php');
 include ('PeterPrint.php');
+include ('../constants.php');
 
 
 ?>
@@ -74,6 +78,27 @@ include ('PeterPrint.php');
     
     
     print  date_format($date, 'jS F Y');
+    
+    print "<br>";
+    print NO;
+    print "<br>";
+    print YES;
+    print "<br>";
+    
+    function simpGen() {
+      yield 'foo';
+      yield 'bar';
+      yield '42';
+      yield 'boo papa doo!';
+      yield '0';
+      yield 'The End.';
+    }
+
+        print "<br>";
+   foreach (simpGen() as $foo) {
+     echo $foo . "<br>";
+   }
+        print "<br>";
     
     print "That's All Folks!";
     
