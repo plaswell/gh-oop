@@ -1,4 +1,6 @@
-<?php
+<?php namespace Petrosgames\hamurabi;
+
+include ('Sumeria.php');
 
 ?>
 <!doctype html>
@@ -15,6 +17,16 @@
   <h1>Hamurabi</h1>  
 <p>Try your hand at governing ancient Sumeria successfully for a ten year term of office.</p>
     <hr>
+    
+    <?php 
+    
+    $reign = new Sumeria();
+    
+    //for ($year = 1; $year <= 10; $year++) {
+      $reign->showStats();
+    //}
+    
+    ?>
 
   </body>
 </html>
