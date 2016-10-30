@@ -1,6 +1,13 @@
 <?php namespace Petrosgames\hamurabi;
-
 include ('Sumeria.php');
+
+if (isset($_POST['submit'])) {
+  $qans = $_POST['question_ans'];
+  $qnum = $_POST['question_num'];
+  //$qnum++;
+  Sumeria::updateVals($qans, $qnum);
+}
+
 
 ?>
 <!doctype html>
@@ -14,19 +21,29 @@ include ('Sumeria.php');
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-  <h1>Hamurabi</h1>  
-<p>Try your hand at governing ancient Sumeria successfully for a ten year term of office.</p>
+    <h1>Hamurabi</h1>
+    <p>Try your hand at governing ancient Sumeria successfully for a ten year term of office.</p>
     <hr>
-    
-    <?php 
-    
-    $reign = new Sumeria();
-    
-    //for ($year = 1; $year <= 10; $year++) {
-      $reign->showStats();
-    //}
-    
+
+    <?php
+
+      
+        Sumeria::showStats();
     ?>
+    <form action="" method="post">
+
+    
+      <?php
+      $q = Sumeria::getCurrentQuestion();
+      echo Question::getQuestion($q);
+      ?>
+      <input type="text" maxlength="5" size="5" name="question_ans">
+      <input type="hidden" value="<?php echo $q; ?>" name="question_num">
+      <input type="submit" name="submit" value="Enter">
+ 
+    </form>
+    
+    <?php Sumeria::showAllVals();; ?>
 
   </body>
 </html>
